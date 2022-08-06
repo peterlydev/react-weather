@@ -15,11 +15,16 @@ const Weather = ({ data }) => {
         <p className="temp">{Math.round(data.main.temp)}°</p>
         <div className="details">
           <div className="parameter-row">
-            <span className="parameter-label">Details</span>
-          </div>
-          <div className="parameter-row">
             <span className="parameter-label">Feels Like</span>
             <span className="parameter-value">{Math.round(data.main.feels_like)}°</span>
+          </div>
+          <div className="parameter-row">
+            <span className="parameter-label">Min Temp</span>
+            <span className="parameter-value">{Math.round(data.main.temp_min)}°</span>
+          </div>
+          <div className="parameter-row">
+            <span className="parameter-label">Max Temp</span>
+            <span className="parameter-value">{Math.round(data.main.temp_max)}°</span>
           </div>
           <div className="parameter-row">
             <span className="parameter-label">Wind</span>
